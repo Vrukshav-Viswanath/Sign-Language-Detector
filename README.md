@@ -1,1 +1,1 @@
-#American Sign Language Alphabet Detector
+# American Sign Language Alphabet Detector
