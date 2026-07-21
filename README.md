@@ -1,9 +1,7 @@
 # American Sign Language Alphabet Detector
- 
-A real-time American Sign Language (ASL) alphabet recognizer built with MediaPipe and PyTorch. The model classifies static hand poses into ASL letters using hand landmark features rather than raw pixels, making it lightweight and fast enough to run live from a webcam.
- 
-## Overview
- 
-This project detects and classifies the 26 letters of the ASL alphabet from hand gestures. Instead of feeding raw images into a CNN, it uses **MediaPipe Hands** to extract 21 3D hand landmarks per frame, converts them into a normalized 126-dimensional feature vector, and passes that into a **PyTorch MLP** classifier.
- 
-This landmark-based approach is more robust to lighting, background, and skin tone variation than raw image classification, and trains significantly faster.
+
+A real-time webcam app that recognizes American Sign Language letters using MediaPipe hand landmarks and a PyTorch MLP.
+
+Instead of classifying raw video frames, every frame is reduced to a 126-number hand landmark vector (21 points × x/y/z × up to 2 hands) via MediaPipe. This feeds into a small MLP that classifies which letter the hand shape represents.
+
+Trained on the [Kaggle ASL Alphabet dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet) (~10,400 samples across 26 classes) — **98.2% validation accuracy**.
