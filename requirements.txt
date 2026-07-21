@@ -1,7 +1,3 @@
-torch
-torchvision
-mediapipe
+mediapipe==0.10.14
 opencv-python
 numpy
-scikit-learn
-matplotlib
