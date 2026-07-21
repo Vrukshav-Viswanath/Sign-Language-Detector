@@ -1,1 +1,28 @@
+# Data and model artifacts (large, regenerable, and some are licensed datasets)
+data/
+models/*.pt
+models/*.json
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# PyCharm
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Downloaded/extracted datasets if they ever land inside the project
+asl_alphabet_train/
+WLASL/
+*.zip
