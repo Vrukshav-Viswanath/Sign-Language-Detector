@@ -1,9 +1,9 @@
-"""
-Shared MediaPipe hand-landmark extraction utilities.
 
-Every other script (data collection, training, live inference) imports
-from here so the feature representation is always identical.
-"""
+#Every other script (data collection, training, live inference) imports
+#from here so the feature representation is always identical.
+
+#If you change the math here, you need to retrain. 
+
 
 import numpy as np
 import mediapipe as mp
@@ -42,19 +42,19 @@ def extract_features(results) -> np.ndarray:
     if not results.multi_hand_landmarks:
         return features
 
-    # Sort detected hands so "Left" always fills slot 0, "Right" fills slot 1.
+    # Sort detected hands so Left always fills slot 0, Right fills slot 1.
     hands_data = []
     for hand_landmarks, handedness in zip(
         results.multi_hand_landmarks, results.multi_handedness
     ):
-        label = handedness.classification[0].label  # "Left" or "Right"
+        label = handedness.classification[0].label  # Left or Right
         xyz = np.array(
             [[lm.x, lm.y, lm.z] for lm in hand_landmarks.landmark],
             dtype=np.float32,
         )
         hands_data.append((label, normalize_landmarks(xyz)))
 
-    hands_data.sort(key=lambda t: t[0])  # "Left" < "Right" alphabetically
+    hands_data.sort(key=lambda t: t[0])  # Left < Right alphabetically
 
     for i, (_, feat) in enumerate(hands_data[:MAX_HANDS]):
         features[i * FEATURES_PER_HAND : (i + 1) * FEATURES_PER_HAND] = feat
