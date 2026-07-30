@@ -14,7 +14,7 @@ Trained on the [Kaggle ASL Alphabet dataset](https://www.kaggle.com/datasets/gra
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 ```
  
-(If you don't have a GPU, just `pip install torch` instead.)
+(If you don't have a GPU, just use `pip install torch` instead.)
  
 3. Install the rest:
 ```bash
