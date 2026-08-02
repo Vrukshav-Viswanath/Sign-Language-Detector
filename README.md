@@ -1,6 +1,6 @@
 # Live ASL Letter Detector
  
-A real-time webcam app that recognizes American Sign Language letters (A-Y, excluding J and Z, which involve motion rather than a static hand shape) using MediaPipe hand landmarks and a PyTorch MLP.
+A real-time webcam app that recognizes American Sign Language letters (A-Z) using MediaPipe hand landmarks and a PyTorch MLP.
  
 Instead of classifying raw video frames, every frame is reduced to a 126-number hand landmark vector (21 points x/y/z x up to 2 hands) via MediaPipe. This feeds into a small MLP that classifies which letter the hand shape represents.
  
