@@ -61,4 +61,7 @@ python live_letters.py
  
 - Letters are classified from a single still frame. Hold the hand shape steady for it to register.
 - J and Z are intentionally excluded, since they trace a motion path in real ASL rather than a fixed hand shape, and a single-frame classifier can't reliably capture that. They're better suited to a sequence model.
-- `data/` and `models/` are excluded from version control. Regenerate them with `prepare_letters_dataset.py` after unzipping the downloaded kaggle dataset. 
+- `data/` and `models/` are excluded from version control. Regenerate them with `prepare_letters_dataset.py` after unzipping the downloaded kaggle dataset.
+
+## ASL Alphabet Chart
+![ASL Alphabet Chart](https://www.lingvano.com/images/blog/sign-language-alphabet-chart.jpg)
