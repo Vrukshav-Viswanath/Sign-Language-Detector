@@ -65,4 +65,4 @@ python live_letters.py
 
 ## ASL Alphabet Charts
 ![ASL Alphabet Chart](https://www.lingvano.com/images/blog/sign-language-alphabet-chart.jpg)
-![ASL Alphabet Chart](https://cdn11.bigcommerce.com/s-dc9f5/images/stencil/1280x1280/products/2095/8082/ASL_Trans_ABCs__08283.1443708103.jpg)
+
